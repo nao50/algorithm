@@ -4,8 +4,8 @@ import (
 	"fmt"
 )
 
-// FizzBuzz is return usual FizzBuzz and error
-func FizzBuzz(n int) (string, error) {
+// fizzbuzz is return usual FizzBuzz and error
+func fizzbuzz(n int) (string, error) {
 	if n < 1 || n > 100 {
 		return "", fmt.Errorf("Invalid number: %v", n)
 	}

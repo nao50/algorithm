@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func TestFizzBuzz(t *testing.T) {
+func Testfizzbuzz(t *testing.T) {
 	tests := []struct {
 		input int
 		want  string
@@ -19,7 +19,7 @@ func TestFizzBuzz(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		got, err := FizzBuzz(test.input)
+		got, err := fizzbuzz(test.input)
 		if !test.err && err != nil {
 			t.Fatalf("should not be error for %v but: %v", test.input, err)
 		}
