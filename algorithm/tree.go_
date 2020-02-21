@@ -1,0 +1,20 @@
+package main
+
+// 格納するデータのインターフェース
+type Item interface {
+	Eq(Item) bool
+	Less(Item) bool
+}
+
+// 節
+type Node struct {
+	item        Item
+	left, right *Node
+}
+
+// 節の生成
+func newNode(x Item) *Node {
+	p := new(Node)
+	p.item = x
+	return p
+}

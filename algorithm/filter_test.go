@@ -10,7 +10,7 @@ func TestFilter(t *testing.T) {
 		input []int
 		want  []int
 	}{
-		{input: []int{1, 2}, want: []int{2, 3}},
+		{input: []int{1, 2}, want: []int{2}},
 		{input: []int{1, 2, 3, 4, 5}, want: []int{2, 4}},
 		{input: []int{}, want: []int{}},
 	}
@@ -18,7 +18,7 @@ func TestFilter(t *testing.T) {
 	for _, test := range tests {
 		got := Filter(isEven, test.input)
 		if !reflect.DeepEqual(got, test.want) {
-			t.Fatalf("\n want: %v, \n actual: %v", test.want, test.input)
+			t.Fatalf("\n want: %v, \n actual: %v", test.want, got)
 		}
 	}
 }
